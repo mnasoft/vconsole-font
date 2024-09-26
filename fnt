@@ -1,6 +1,83 @@
 #!/bin/bash
 
 case "$1" in
+    +)
+        input=`showfont -i`
+        IFS='x'
+        read -r RW CW CNT <<< "$input"
+        case "$CW" in
+            12)
+                setfont ter-v14b -m 8859-5
+                ;;
+            
+            14)
+                setfont ter-v16b -m 8859-5
+                ;;
+            
+            16)
+                setfont ter-v18b -m 8859-5
+                ;;
+
+            18)
+                setfont ter-v20b -m 8859-5
+                ;;
+
+            20)
+                setfont ter-v22b -m 8859-5
+                ;;
+
+            22)
+                setfont ter-v24b -m 8859-5
+                ;;
+            24)
+                setfont ter-v28b -m 8859-5
+                ;;
+            
+            28)
+                setfont ter-v32b -m 8859-5
+                ;;
+        esac
+        ;;
+        
+    -)
+        input=`showfont -i`
+        IFS='x'
+        read -r RW CW CNT <<< "$input"
+        case "$CW" in
+            14)
+                setfont ter-v12n -m 8859-5
+                ;;
+            
+            16)
+                setfont ter-v16b -m 8859-5
+                ;;
+            
+            18)
+                setfont ter-v16b -m 8859-5
+                ;;
+
+            20)
+                setfont ter-v18b -m 8859-5
+                ;;
+
+            22)
+                setfont ter-v20b -m 8859-5
+                ;;
+
+            24)
+                setfont ter-v22b -m 8859-5
+                ;;
+            28)
+                setfont ter-v24b -m 8859-5
+                ;;
+            
+            32)
+                setfont ter-v28b -m 8859-5
+                ;;
+            
+        esac
+        ;;
+    
     12n)
         setfont ter-v${1} -m 8859-5
         ;;
@@ -55,6 +132,6 @@ case "$1" in
         setfont ter-v${1} -m 8859-5
         ;;
     *)
-        echo "Usage: $0 {12n|14b|14n|16b|16n|18b|18n|20b|20n|22b|22n|24b|24n|28b|28n|32b|32n}"
+        echo "Usage: $0 {+|-|12n|14b|14n|16b|16n|18b|18n|20b|20n|22b|22n|24b|24n|28b|28n|32b|32n}"
         exit 1
 esac
