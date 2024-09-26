@@ -5,14 +5,14 @@ case "$1" in
         input=`showconsolefont -i`
         IFS='x'
         read -r RW CW CNT <<< "$input"
-        setfont ter-v${i}n -m 8859-5
+        setfont ter-v${CW}${i}n -m 8859-5
         ;;
     
     b)
         input=`showconsolefont -i`
         IFS='x'
         read -r RW CW CNT <<< "$input"
-        setfont ter-v${i}b -m 8859-5
+        setfont ter-v${CW}${i}b -m 8859-5
         ;;
     
     +)
