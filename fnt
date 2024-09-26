@@ -1,0 +1,60 @@
+#!/bin/bash
+
+case "$1" in
+    12n)
+        setfont ter-v${1} -m 8859-5
+        ;;
+    
+    14b)
+        setfont ter-v${1} -m 8859-5
+        ;;
+    
+    14n)
+        setfont ter-v${1} -m 8859-5
+        ;;
+    16b)
+        setfont ter-v${1} -m 8859-5
+        ;;
+    16n)
+        setfont ter-v${1} -m 8859-5
+        ;;
+    18b)
+        setfont ter-v${1} -m 8859-5
+        ;;
+    18n)
+        setfont ter-v${1} -m 8859-5
+        ;;
+    20b)
+        setfont ter-v${1} -m 8859-5
+        ;;
+    20n)
+        setfont ter-v${1} -m 8859-5
+        ;;
+    22b)
+        setfont ter-v${1} -m 8859-5
+        ;;
+    22n)
+        setfont ter-v${1} -m 8859-5
+        ;;
+    24b)
+        setfont ter-v${1} -m 8859-5
+        ;;
+    24n)
+        setfont ter-v${1} -m 8859-5
+        ;;
+    28b)
+        setfont ter-v${1} -m 8859-5
+        ;;
+    28n)
+        setfont ter-v${1} -m 8859-5
+        ;;
+    32b)
+        setfont ter-v${1} -m 8859-5
+        ;;
+    32n)
+        setfont ter-v${1} -m 8859-5
+        ;;
+    *)
+        echo "Usage: $0 {12n|14b|14n|16b|16n|18b|18n|20b|20n|22b|22n|24b|24n|28b|28n|32b|32n}"
+        exit 1
+esac
