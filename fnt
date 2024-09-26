@@ -1,8 +1,22 @@
 #!/bin/bash
 
 case "$1" in
+    n)
+        input=`showconsolefont -i`
+        IFS='x'
+        read -r RW CW CNT <<< "$input"
+        setfont ter-v${i}n -m 8859-5
+        ;;
+    
+    b)
+        input=`showconsolefont -i`
+        IFS='x'
+        read -r RW CW CNT <<< "$input"
+        setfont ter-v${i}b -m 8859-5
+        ;;
+    
     +)
-        input=`showfont -i`
+        input=`showconsolefont -i`
         IFS='x'
         read -r RW CW CNT <<< "$input"
         case "$CW" in
@@ -40,7 +54,7 @@ case "$1" in
         ;;
         
     -)
-        input=`showfont -i`
+        input=`showconsolefont -i`
         IFS='x'
         read -r RW CW CNT <<< "$input"
         case "$CW" in
@@ -49,7 +63,7 @@ case "$1" in
                 ;;
             
             16)
-                setfont ter-v16b -m 8859-5
+                setfont ter-v14b -m 8859-5
                 ;;
             
             18)
