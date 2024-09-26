@@ -1,5 +1,5 @@
 #!/bin/bash
-echo "Installing..."
+
 echo "" > INSTALL.log
 echo "" > UNINSTALL.run
 
@@ -7,7 +7,7 @@ echo "" > UNINSTALL.run
 # git clean -fx
 for i in `find . -name "fnt"`
 do
-    echo "${i}"
+    echo "/usr/local/bin/${i}"
     cp -f ${i} /usr/local/bin/
     chmod +x /usr/local/bin/${i}
     echo "/usr/local/bin/${i}" >> INSTALL.log
