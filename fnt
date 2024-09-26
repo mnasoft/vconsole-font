@@ -147,8 +147,8 @@ case "$1" in
         ;;
     *)
         echo "Usage for biger|smaller font: $0 {+|-}" 
-        echo "Usage for thin|bold font : $0 {n|b}"
-        echo "Usage: $0 {12n|14b|14n|16b|16n|18b|18n|20b|20n|22b|22n|24b|24n|28b|28n|32b|32n}" 
+        echo "Usage for thin|bold font    : $0 {n|b}"
+        echo "Usage                       : $0 {12n|14b|14n|16b|16n|18b|18n|20b|20n|22b|22n|24b|24n|28b|28n|32b|32n}" 
         exit 1
 esac
 
