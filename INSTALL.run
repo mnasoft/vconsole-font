@@ -3,14 +3,19 @@
 echo "" > INSTALL.log
 echo "" > UNINSTALL.run
 
-# mkdir -p /usr/local/bin/
+WINDOWS_FONTS="/usr/local/share/fonts/WindowsFonts"
+mkdir -p ${WINDOWS_FONTS} 
 # git clean -fx
-for i in `find . -name "fnt"`
+for i in `find ./fonts  -name "*.tt?"`
 do
-    echo "/usr/local/bin/${i}"
-    cp -f ${i} /usr/local/bin/
-    chmod +x /usr/local/bin/${i}
-    echo "/usr/local/bin/${i}" >> INSTALL.log
-    echo "rm -f /usr/local/bin/${i}" >> UNINSTALL.run
-    chmod +x UNINSTALL.run
+    #    echo "/usr/local/bin/${i}"
+    FONT=`basename $i`
+    cp -f ${i} ${WINDOWS_FONTS}/${FONT}
+    chmod 644 ${WINDOWS_FONTS}/${FONT}
+#    chmod +x /usr/local/bin/${i}
+#    echo "/usr/local/bin/${i}" >> INSTALL.log
+#    echo "rm -f /usr/local/bin/${i}" >> UNINSTALL.run
+#    chmod +x UNINSTALL.run
 done
+
+fc-cache --force
